@@ -22,11 +22,15 @@ header {
 
 
 header #logo {
-  font-family: "ChronicleSemiBold";
+  font-family: "Chronicle Display A", "Chronicle Display B", serif;
+  font-style: normal;
+  font-weight: 600;
   font-size: .875rem;
 
   .description {
-    font-family: "ChronicleItalic";
+    font-family: "Chronicle Display A", "Chronicle Display B", serif;
+    font-style: italic;
+    font-weight: 400;
   }
 
   a {
@@ -52,7 +56,9 @@ header #logo {
 header #main-navigation {
   a {
     text-transform: uppercase;
-    font-family: "IdealSemiBold";
+    font-family: "Ideal Sans A", "Ideal Sans B", sans-serif;
+    font-style: normal;
+    font-weight: 600;
     font-size: .75rem;
     margin-right: 2.5rem;
     transition: all .25s cubic-bezier(.75,0,.2,1);

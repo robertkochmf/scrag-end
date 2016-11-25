@@ -41,9 +41,3 @@ exclude:
   - Gemfile
   - Gemfile.lock
   # - assets
-
-contentful:
-  spaces:
-    - pages:
-        space: dl456yn2h1gw
-        access_token: 60510373b6aaffcff94461a49f4bf8048271f1f332ef3b0ba069af9ca784c58c

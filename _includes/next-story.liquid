@@ -1,24 +1,30 @@
+{% assign story = site.stories | sample %}
+
 <section class="next-story">
   <div class="container animation-set">
     <div class="next-story-intro">
       <h5>Another story you may like</h5>
     </div>
     <div class="next-article-container row">
+
       <figure class="article-component col-md-8 offset-md-2 col-lg-6 offset-lg-3 animated animated--slide-up">
         <div class="image-container">
-          <a href="#"><img src="/assets/images/content/article-landscape.jpg" alt="" /></a>
+          <a href="{{ story.url }}">
+            <img src="/assets/images/content/{{ story.thumbnail }}" alt="" />
+          </a>
         </div>
         <div class="article-info">
           <div class="header">
-            <h3>Meet your maker</h3>
-            <span class="meta">Issue One — Greg Clarke — 8 minute read</span>
+            <a href="{{ story.url }}"><h3>{{ story.title }}</h3></a>
+            <span class="meta">Issue {{ story.issue | capitalize }} — {{ story.contributors[0].name }} — {{ story.read-time }} minute read</span>
           </div>
           <div class="excerpt">
-            <p class="small">People are wanting to fly to international destinations for vacations but planning a holiday getaway can easily turn into a stressful venture when the matter of costs comes up. However, airfare can be very expensive. </p>
-            <a href="#" class="secondary-link">Continue reading</a>
+            <p class="small">{{ story.excerpt }}</p>
+            <a href="{{ story.url }}" class="secondary-link">Continue reading</a>
           </div>
         </div>
       </figure>
+
     </div>
   </div>
 </section>

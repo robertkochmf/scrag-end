@@ -4,10 +4,20 @@
       <div class="copy-block col-sm-7 col-md-6 col-lg-6">
         {{ module.copy | markdownify}}
       </div>
-      <div class="image-block image-block--{{ module.image.position }} col-sm-5 col-md-6 col-lg-5 animation-set animated animated--no-slide-up">
-        <img src="/assets/images/content/{{ module.image.src }}" alt="{{ module.image.alt}}" />
-        <p class="caption">{{ module.image.caption }}</p>
-      </div>
+
+      {% if module.image%}
+
+        <div class="image-block image-block--{{ module.image.position }} col-sm-5 col-md-6 col-lg-5 animation-set animated animated--no-slide-up">
+          <img src="/assets/images/content/{{ module.image.src }}" alt="{{ module.image.alt}}" />
+          {% if module.image.caption %}
+            <p class="caption">{{ module.image.caption }}</p>
+          {% endif %}
+        </div>
+
+      {% endif %}
+
+
+
     </div>
   </div>
 </section>

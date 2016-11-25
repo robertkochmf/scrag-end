@@ -16,7 +16,8 @@
 	}
 
 	.email-link, .sub-nav {
-		font-family: 'ChronicleLight';
+		font-family: 'Chronicle Display A';
+		font-weight: 300;
 		display: inline-block;
 		transition: $transition-hover-on;
 
@@ -30,7 +31,9 @@
 		margin-bottom: 2.5rem;
 
 		li {
-			font-family: 'IdealSemiBold';
+			font-family: "Ideal Sans A", "Ideal Sans B", sans-serif;
+			font-style: normal;
+			font-weight: 600;
 			text-transform: uppercase;
 			font-size: .625rem;
 			display: inline-block;

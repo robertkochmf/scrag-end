@@ -1,3 +1,22 @@
+zero:
+  number: Zero
+  name: The Pilot Issue
+  description: >
+
+    For our pilot issue, Richard Webb of Swampdog and Betterfish explains what irks him about the Australian seafood Industry. Luke Burgess of Garagiste invited us to a day at his Tasmanian restaurant and explained just how important wine is to his life in food. We sat through a rant by Cup Coffee proprietor, Josh Russell regarding the importance of arrogance, while our own editor-in-chief offers a taste of how much can be learnt when travelling through food saturated Gascony.
+
+  link: http://shop.scragend.com/product/issue-zero
+  color: yellow
+  cover-image:
+    src: issue-cover.jpg
+    alt: this is a cover of the issue
+  landscape-image:
+    src: latest-landscape.jpg
+    alt: this is a landscape image of the issue
+  feature-image:
+    src: feature-image.jpg
+    alt: this is the feature image of the issue
+
 one:
   number: One
   name: The Producers Issue
@@ -11,7 +30,7 @@ one:
     src: issue-cover.jpg
     alt: this is a cover of the issue
   landscape-image:
-    src: latest-landscape.jpg
+    src: latest-issue-hero.jpg
     alt: this is a landscape image of the issue
   feature-image:
     src: feature-image.jpg

@@ -4,7 +4,9 @@
     {% for image in module.images %}
       <div class="portrait-image col-md-5 animation-set animated animated--no-slide-up">
         <img src="/assets/images/content/{{ image.src }}" alt="{{ image.alt }}" />
-        <p class="caption"> {{ image.caption }}</p>
+        {% if image.caption %}
+          <p class="caption"> {{ image.caption }}</p>
+        {% endif %}
       </div>
     {% endfor %}
 

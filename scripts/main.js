@@ -10,7 +10,7 @@ init = function(){
 	smoothScroll.init({
 		speed: 750,
 		easing: 'easeInOutCubic',
-		offset: 50
+		offset: 50,
 	});
 
 	//Check if we're mobile or not, and only apply animations on desktop

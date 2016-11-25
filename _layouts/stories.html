@@ -25,7 +25,7 @@
                 <div class="spacer"></div>
                 <h1 class="display">{{page.title}}</h1>
                 <h5 class="story-meta">
-                  {% if page.issue %} Originally published in Issue {{ page.issue}} {% else %} Published {{ page.date-published }} {% endif %} — {{ page.read-time }} minute read
+                  {% if page.issue %} Originally published in Issue {{ page.issue | capitalize }} {% else %} Published {{ page.date-published }} {% endif %} — {{ page.read-time }} minute read
                 </h5>
                 <h4 class="byline">
                   {% for item in page.contributors %}
@@ -36,18 +36,17 @@
                 </h4>
               </div>
 
-              <div class="feature-image" data-center-top="transform:translate3d(0px, 10%, 0px)" data-top-bottom="transform:translate3d(0px, -10%, 0px)">
-                <img src="/assets/images/content/{{page.feature-image}}" alt="" />
+
+              <div class="feature-image {{ page.feature-image.orientation }} {% if page.feature-image.orientation == "landscape" %} col-lg-6 offset-lg-5 {% else %} col-lg-4 offset-lg-7 {% endif %}" >
+                <img src="/assets/images/content/{{page.feature-image.src}}" alt="" />
               </div>
+
             </div>
 
           </div>
         </section>
 
       </div>
-
-
-
 
       <section class="container story-lead">
         <div class="row">

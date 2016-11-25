@@ -2,6 +2,10 @@
   color: $issue-one;
 }
 
+.issue-zero {
+  color: $issue-zero;
+}
+
 .spacer {
   width: 2.5rem;
   height: 1px;
@@ -90,23 +94,24 @@ section.story-hero {
 
   .feature-image {
     position: relative;
-    align-self: flex-end;
-    transform: translate3d(0px, 10%, 0px);
+    padding: 0;
+    // transform: translate3d(0px, 50%, 0px);
+
     background-color: currentColor;
-    width: 100%;
-    margin: 0 auto;
+    // width: 100%;
+    // margin: 0 auto;
 
-    @include media(">small") {
-      width: 400px;
-  	}
-
-    @include media(">medium") {
-      width: 400px;
-      margin: 0;
-  	}
+    // @include media(">small") {
+    //   width: 400px;
+  	// }
+    //
+    // @include media(">medium") {
+    //   width: 400px;
+    //   margin: 0;
+  	// }
 
     img {
-      width: 400px;
+      // width: 400px;
       opacity: .9;
       transition: opacity 1s cubic-bezier(.18,1,.25,1);
     }
@@ -118,6 +123,14 @@ section.story-hero {
       }
     }
   }
+}
+
+.feature-image.landscape {
+  margin-top: calc(100vw - 90%);
+}
+
+.feature-image.portrait {
+  margin-top: calc(100vw - 100%);
 }
 
 //Lead Paragraph
@@ -135,7 +148,9 @@ section.story-hero {
     position: relative;
 
     p {
-      font-family: "IdealSemiBold";
+      font-family: "Ideal Sans A", "Ideal Sans B", sans-serif;
+			font-style: normal;
+			font-weight: 600;
       font-size: 1.5rem;
       line-height: 2.5rem;
     }
@@ -185,7 +200,9 @@ section.story-hero {
 }
 
 p.caption {
-  font-family: "ChronicleItalic";
+  font-family: "Chronicle Display A", "Chronicle Display B", serif;
+  font-style: italic;
+  font-weight: 400;
   font-size: .875rem;
   line-height: 1.25rem;
   margin-top: 1rem;
