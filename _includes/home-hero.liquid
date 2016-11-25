@@ -25,10 +25,11 @@
     </div>
     <div class="article-container mobile animation-set">
       <ul class="article-title-container mobile animated animated--no-slide-up" data-delay="100">
-        <li><a href="#" class="article-title" data-title="meatsmith"><h2>A meatsmith’s revolucion</h2></a></li>
-        <li><a href="#" class="article-title" data-title="yarra"><h2>Yarra Valley martini</h2></a></li>
-        <li><a href="#" class="article-title" data-title="farmers"><h2>Farmers eat shit</h2></a></li>
-        <li><a href="#" class="article-title" data-title="growth"><h2>Growth</h2></a></li>
+        {% for story in site.stories limit:4 %}
+          {% if story.homepage-feature == true %}
+            <li><a href="{{ story.url }}" class="article-title animated animated--no-slide-up" data-delay="100" data-title="{{ story.title | slugify }}"><h2>{{ story.title }}</h2></a></li>
+          {% endif %}
+        {% endfor %}
       </ul>
       <a data-scroll href="#recent-stories" class="view-more text-link animated animated--no-slide-up" data-delay="150">View more stories</a>
     </div>
