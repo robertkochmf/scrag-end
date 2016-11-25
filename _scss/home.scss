@@ -1,0 +1,494 @@
+
+// Home Hero Component
+.home-hero {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.article-content-panel {
+  position: relative;
+  height: 100%;
+  display: none;
+  background-color: $skin;
+
+
+  @include media(">small") {
+    width: 60vw;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .article-container {
+    align-self: flex-end;
+    width: 100%;
+    padding: 0 4% 8% 8%;
+  }
+
+}
+
+.article-container.mobile {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0 4% 8% 8%;
+
+  @include media(">small") {
+    display: none;
+    pointer-events: none;
+    visibility: hidden;
+  }
+}
+
+.article-container.mobile > ul > li > a, .article-container.mobile > a {
+  color: #FFF;
+
+  &:before {
+    background-color: #FFF;
+  }
+}
+
+.article-container.mobile > ul > li > a.active {
+  color: #FFF;
+}
+
+.article-container.mobile > ul > li > a:not(.active){
+  opacity: .5;
+}
+
+
+ul.article-title-container {
+  padding: 0;
+  margin-bottom: 2.5rem;
+
+  li {
+    list-style: none;
+    margin-bottom: .5rem;
+
+    &:last-of-type {
+      margin-bottom: 0px;
+    }
+
+    a {
+      transition: all .3s ease-in-out;
+      &:hover {
+        color: rgba($black, .6);
+        transition: all .3s ease-in-out;
+      }
+
+      &.active {
+        color: rgba($black, .6);
+      }
+    }
+
+    h2 {
+      display: inline-block;
+      margin-bottom: 0;
+      font-size: 2rem;
+      line-height: 2.5rem;
+
+      @include media(">medium") {
+        font-size: 2.5rem;
+        line-height: 3rem;
+      }
+
+      @include media(">large") {
+        font-size: 3rem;
+        line-height: 4rem;
+      }
+
+      @include media(">huge") {
+        font-size: 3.5rem;
+        line-height: 4.5rem;
+      }
+
+    }
+  }
+}
+
+
+
+.article-image-panel {
+  position: relative;
+  height: 100%;
+  width: 100vw;
+
+  @include media(">small") {
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .article-images-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    .single-article-image {
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-position: top;;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+
+      &:after {
+        @include media("<small") {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          opacity: 1;
+          background-image: linear-gradient(-180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.24) 100%);
+        }
+      }
+    }
+    .single-article-image.active {
+      opacity: 1;
+      transition: opacity .3s ease-in-out;
+    }
+  }
+}
+
+
+
+// Recent Articles
+
+.recent-stories-container {
+  width: 100%;
+}
+.recent-stories-intro {
+  // width: 90%;
+  // margin: 0 auto;
+  margin-top: 7.5rem;
+  margin-bottom: 7.5rem;
+
+  @include media(">medium") {
+    // width: 75%;
+	}
+
+  @include media(">large") {
+    // width: 50%;
+	}
+
+  p {
+    margin-bottom: 3rem;
+  }
+}
+
+.stories-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  transition: $transition-hover-on;
+}
+
+figure.article-component {
+  padding: 0;
+  margin-bottom: 5rem;
+
+  @include media(">small") {
+    padding-left: 2rem;
+    padding-right: 2rem;
+	}
+
+  @include media(">medium") {
+    margin-bottom: 0;
+  }
+
+  @include media(">large") {
+    padding-left: 4rem;
+    padding-right: 4rem;
+	}
+
+  .image-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+
+    a {
+      position: relative;
+      align-self: flex-end;
+
+      &:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: transparentize($skin, 0.8);
+        transition: $transition-hover-on;
+        opacity: 0;
+      }
+
+    }
+
+    a:hover:after {
+      opacity: 1;
+      transition: $transition-hover-on;
+    }
+
+    img {
+      text-align: center;
+    }
+
+  }
+
+  .article-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @include media(">medium") {
+  		height: 480px;
+  	}
+
+    .header {
+      width: 100%;
+      margin-bottom: 2rem;
+
+      h3 {
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+
+      }
+      span.meta {
+        font-family: "ChronicleItalic";
+      }
+    }
+
+    .excerpt {
+      align-self: flex-end;
+
+      @include media(">small") {
+    		width: 90%;
+    	}
+
+      @include media(">medium") {
+    		width: 100%;
+    	}
+
+      @include media(">large") {
+    		width: 80%;
+    	}
+
+      @include media(">huge") {
+    		width: 80%;
+    	}
+    }
+  }
+
+}
+
+//Latest Issue
+
+.latest-issue {
+  position: relative;
+  padding-top: 7rem;
+  background-color: $skin;
+
+  .latest-issue-intro {
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .latest-issue-feature {
+    position: relative;
+    display: flex;
+    flex-direction: column;;
+
+    .issue-hero-image {
+      align-self: center;
+      text-align: center;
+    }
+
+    .overlap-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: -40px;
+      transform: translateY(-10rem);
+      flex-direction: column-reverse;
+
+      @include media(">small") {
+        transform: translateY(-15rem);
+        margin-bottom: -120px;
+    	}
+
+      @include media(">medium") {
+        flex-direction: row;
+        transform: translateY(0);
+
+    	}
+
+      @include media(">large") {
+        transform: translateY(0);
+        margin-bottom: -80px;
+    	}
+
+      @include media(">huge") {
+        transform: translateY(0);
+    	}
+    }
+
+    .issue-description {
+      background-color: $skin;
+      padding: 0rem;
+
+      @include media(">medium") {
+        padding: 2rem;
+        padding-top: 2.5rem;
+        padding-left: 0;
+        transform: translateY(-9rem);
+        align-self: flex-start;
+    	}
+
+      @include media('>large'){
+        padding: 3rem;
+      }
+
+      @include media(">huge") {
+        padding: 3.5rem;
+    	}
+
+    }
+
+    .issue-cover{
+      transform: translateY(0);
+      height: 100%;
+      text-align: center;
+      width: 240px;
+      align-self: center;
+      margin-bottom: 3rem;
+
+      @include media(">small") {
+    		width: 280px;
+    	}
+
+      @include media(">medium") {
+    		width: 240px;
+        transform: translateY(-120%);
+        margin-bottom: 0rem;
+    	}
+
+      @include media(">large") {
+        transform: translateY(-140%);
+    	}
+
+      @include media(">huge") {
+        width: 320px;
+        transform: translateY(-100%);
+    	}
+    }
+
+  }
+
+}
+
+//About Scrag
+.about-scrag {
+  position: relative;
+  padding-top: 6rem;
+
+  @include media(">large") {
+    padding-top: 10rem;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+
+    @include media(">large") {
+      margin-bottom: 0rem;
+    }
+
+    .scrag-info {
+      background: #FFF;
+      z-index: 200;
+      margin-bottom: 5rem;
+
+      @include media(">small") {
+      }
+
+      @include media(">medium") {
+        padding: 3rem;
+      }
+
+      @include media(">large") {
+        padding: 3rem;
+        margin-bottom: 0rem;
+      }
+
+      p {
+        margin-bottom: 3rem;
+      }
+    }
+
+    .scrag-image {
+      align-self: flex-end;
+      transform: translateY(0);
+
+      @include media(">medium") {
+        transform: translateY(-2rem);
+      }
+
+      @include media(">large") {
+        transform: translateY(-8rem);
+      }
+
+    }
+  }
+
+  .stockist-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+
+    ul.stockist-list {
+      margin-bottom: 2.5rem;
+      text-align: center;
+
+      @include media(">medium") {
+        text-align: left;
+      }
+
+      li.title {
+        font-family: "ChronicleItalic";
+        font-size: 1rem;
+        margin-bottom: 1.125rem;
+      }
+
+      li.link {
+        margin-top: 2rem;
+      }
+
+      li {
+        list-style: none;
+        font-family: "ChronicleLight";
+        font-size: 1.5rem;
+        line-height: 1.666;
+      }
+    }
+
+  }
+}

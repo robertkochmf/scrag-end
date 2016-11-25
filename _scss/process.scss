@@ -1,0 +1,49 @@
+#agile-diagram{
+	.image-block{
+		background-image: url('/assets/images/content/agile-diagram.svg');
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-bottom: 0rem;
+	}
+
+	#agile-diagram-content{
+		display: flex;
+		flex-direction: row;
+
+		h4{
+			margin-bottom: 0px;
+		}
+
+		p{
+			margin-top: 0px;
+			font-style: italic;
+			line-height: 1.25rem;
+		}
+
+		> div{
+			width: 50%;
+		}
+	}
+
+	margin-bottom: 2rem;
+
+	@include media(">medium") {
+		// margin-bottom: 4rem;
+
+		#collaborate{
+			position: absolute;
+			width: 20%;
+			left: 20%;
+			top: 45%;
+			transform: translate3d(0, -75%, 0);
+		}
+
+		#iterate{
+			position: absolute;
+			width: 20%;
+			left: 60%;
+			top: 45%;
+			transform: translate3d(0, -75%, 0);
+		}
+	}
+}

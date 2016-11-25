@@ -1,0 +1,29 @@
+{% assign issue = site.data.issues[page.latest-issue] %}
+
+<section class="latest-issue">
+  <div class="container">
+    <div class="latest-issue-intro row">
+      <h5>Our latest issue</h5>
+      <h2>Issue {{ issue.number }} - {{ issue.name }}</h2>
+    </div>
+    <div class="latest-issue-feature row">
+
+      <div class="issue-hero-image col-md-8 col-sm-12" data-bottom-top="transform:translate3d(0px, 0%, 0px)" data-top-bottom="transform:translate3d(0px, -10%, 0px)">
+        <img src="assets/images/content/{{ issue.landscape-image.src }}" alt="{{ issue.landscape-image.alt }}" />
+      </div>
+
+      <div class="overlap-container row">
+        <div class="issue-description col-md-5 offset-md-1">
+          {{ issue.description | markdownify}}
+          <a href="{{ issue.link }}" class="text-link" target="_blank">Purchase issue {{ issue.number }}</a>
+        </div>
+
+        <div class="issue-cover">
+          <img src="assets/images/content/{{ issue.cover-image.src }}" alt="{{ issue.cover-image.alt }}" />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,49 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing these this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Scag End
+email: hello@scragend.com
+description: > # this means to ignore newlines until "baseurl:"
+  Scrag End is...
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "http://scragend.com" # the base hostname & protocol for your site
+
+
+# Build settings
+markdown: kramdown
+# theme: minima
+
+# sass:
+#   sass_dir: /css
+
+collections:
+  stories:
+    output: true
+    permalink: /stories/:path/
+
+exclude:
+  - package.json
+  - node_modules
+  - gulpfile.js
+  - Gemfile
+  - Gemfile.lock
+  # - assets
+
+contentful:
+  spaces:
+    - pages:
+        space: dl456yn2h1gw
+        access_token: 60510373b6aaffcff94461a49f4bf8048271f1f332ef3b0ba069af9ca784c58c

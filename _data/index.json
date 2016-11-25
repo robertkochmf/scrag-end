@@ -1,0 +1,206 @@
+{
+	"intro":"We collaborate with purpose-driven organisations to scale their impact.",
+
+	"case-studies-section":{
+		"title":"Our Work",
+		"description": "We've spent the past 15 years designing and building experiences for impact.",
+		"cta": "See all our work",
+		"cta-link":"/work"
+	},
+
+	"clients-section":{
+		"title":"History",
+		"description": "We pioneered human centred co-design for social impact in Australia."
+	},
+
+	"clients":[
+		{
+			"title":"Bendigo Bank",
+			"logo":"client_bendigo.png"
+		},
+		{
+			"title":"Australian Broadcasting Commission",
+			"logo":"client_abc.png"
+		},
+		{
+			"title":"City of Sydney",
+			"logo":"client_cityofsydney.png"
+		},
+		{
+			"title":"Australian Human Rights Commission",
+			"logo":"client_ahrc.png"
+		},
+		{
+			"title":"Asia Pacific Forum",
+			"logo":"client_apf.png"
+		},
+		{
+			"title":"Flow Systems",
+			"logo":"client_flow.png"
+		},
+
+		{
+			"title":"NSW Government - Health",
+			"logo":"client_nswhealth.png"
+		},
+		{
+			"title":"Oxfam Australia",
+			"logo":"client_oxfam.png"
+		},
+
+		{
+			"title":"Powerhouse Museum",
+			"logo":"client_maas.png"
+		},
+
+		{
+			"title":"Royal Flying Doctor Service",
+			"logo":"client_RFDS.png"
+		},
+
+		{
+			"title":"Telstra",
+			"logo":"client_telstra.png"
+		},
+
+		{
+			"title":"UNSW Australia",
+			"logo":"client_unsw.png"
+		},
+
+		{
+			"title":"Transport for NSW",
+			"logo":"client_transport_nsw.png"
+		},
+		
+		
+		{
+			"title":"NSW EPA",
+			"logo":"client_epa.png"
+		},
+		
+		{
+			"title":"Green Building Council Australia",
+			"logo":"client_gbca.png"
+		},
+		{
+			"title":"National Center of Indigenous Excellence",
+			"logo":"client_ncie.png"
+		},
+		
+		{
+			"title":"Office for Learning & Teaching",
+			"logo":"client_olt.png"
+		},
+		
+		{
+			"title":"Strata Community Australia",
+			"logo":"client_sca.png"
+		},
+		
+		{
+			"title":"University Admissions Center",
+			"logo":"client_UAC.png"
+		},
+		
+		{
+			"title":"UTS",
+			"logo":"client_uts.png"
+		},
+		{
+			"title":"UWS",
+			"logo":"client_uws.png"
+		},
+		{
+			"title":"IAG",
+			"logo":"client_iag.png"
+		},
+		{
+			"title":"Garvan Medical Institute",
+			"logo":"client_garvan.png"
+		},
+		{
+			"title":"Center for Social Impact",
+			"logo":"client_csi.png"
+		},
+		
+	],
+
+	"scale-poster":"Business scales purpose. <br/> Purpose scales business.",
+
+	"services-section":{
+		"title":"How we work",
+		"description": "We specialise in strategic design that supports social, environmental, and organisational impact.",
+		"cta": "Explore Our Process",
+		"cta-link":"/process"
+	},
+
+	"services":[
+		{
+			"title":"Community co-design",
+			"description":"Engaging communities in designing their futures.",
+			"image":"service-three.jpg",
+			"link":"/"
+		},
+		{
+			"title":"Brand and purpose",
+
+			"description":"A well-communicated purpose can be the difference between a good idea and a change making movement.",
+
+			"image":"service-four.jpg",
+			"link":"/"
+		},
+		{
+			"title":"Service design",
+			"description":"Shaping your business for excellent customer experience",
+			"image":"service-one.jpg",
+			"link":"/"
+		},
+		{
+			"title":"Prototyping and testing",
+			"description":"Bringing ideas to life, quickly and testing them in the real world.",
+			"image":"service-two.jpg",
+			"link":"/"
+		}
+		
+	],
+
+	"learn-poster":"What’s blocking your organisation from scaling it’s impact?.",
+
+	"purpose-section":{
+		"title":"Purpose",
+		"description": "Our purpose is to drive social and environmental change, both in the work we do, and how we do it.",
+		"cta": "More about our purpose",
+		"cta-link":"/purpose"
+	},
+
+
+	"b-corp-card":{
+		"title":"We’re proud to be a certified B corporation.",
+		"description":"Certified B Corporations meet higher standards of social and environmental performance, transparency, and accountability. [More.](http://bcorporation.com.au/ \"Bcorp Australia\"){:target=\"_blank\"}"
+	},
+
+	"history-section":{
+		"title":"History",
+		"description": " We’ve had over 15 years of experience creating change with some of the best and brightest minds in the industry."
+	},
+
+	"timeline-steps":[
+		{
+			"title":"2001",
+			"description":"Future Friendly (Originally Digital Eskimo) launches as Australia’s first purpose driven digital agency."
+		},
+
+		{
+			"title":"2016",
+			"description":"Digital Eskimo is aquired by [Mentally Friendly](http://mentallyfriendly.com \"Mentally Friendly\"){:target=\"_blank\"}, and relaunches as Future Friendly. [More](/friendly-family/ \"Read the press release\")"
+		},
+
+		{
+			"title":"Future",
+			"description":"We work with you to change the world. [Let's talk!](/contact/ \"Contact us\")"
+		}
+	]
+
+
+}

@@ -1,0 +1,39 @@
+
+
+$transition-hover-on-fast: all 300ms cubic-bezier(0.075, 0.82, 0.165, 1);
+$transition-hover-off-fast: all 600ms cubic-bezier(0.075, 0.82, 0.165, 1);
+
+$transition-hover-on: all 1000ms cubic-bezier(.18,1,.25,1);
+$transition-hover-off: all 600ms cubic-bezier(.18,1,.25,1);
+
+
+
+.animated--slide-up{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-in-out;
+
+  &.show{
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.animated--no-slide-up {
+  transition: all 1s ease-in-out;
+  opacity: 0;
+
+  &.show {
+    opacity: 1
+  }
+}
+
+
+.animated--slide-up-no-fade{
+  transform: translateY(50px);
+  transition: all 1s ease-in-out;
+
+  &.show{
+    transform: translateY(0px);
+  }
+}

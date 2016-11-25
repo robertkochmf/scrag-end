@@ -1,0 +1,13 @@
+<section class="container content-image-block vertical-spaced">
+  <div class="row">
+    <div class="content-image-block-inner content-image-block-inner--{{ module.position }}">
+      <div class="copy-block col-sm-7 col-md-6 col-lg-6">
+        {{ module.copy | markdownify}}
+      </div>
+      <div class="image-block image-block--{{ module.image.position }} col-sm-5 col-md-6 col-lg-5 animation-set animated animated--no-slide-up">
+        <img src="/assets/images/content/{{ module.image.src }}" alt="{{ module.image.alt}}" />
+        <p class="caption">{{ module.image.caption }}</p>
+      </div>
+    </div>
+  </div>
+</section>

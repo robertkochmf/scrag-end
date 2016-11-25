@@ -1,0 +1,18 @@
+one:
+  number: One
+  name: The Producers Issue
+  description: >
+
+    The Producers issue tackles the beginning of the food chain. Emma-Kate Rose and Robert Pekin ask the question, ‘Why do farmers eat shit?’. Greg Clarke of Great Ocean Ducks explains the price of ducks and how he came to be called GOD. In the King Valley, Prosecco rules, and its champions, the Dal Zotto family, invite us into their home. Meanwhile Clare Burder of Eminence Wines explains the challenges of creating a Champagne-style sparkling on the plateau above the Prosecco Road. We re-visit Josh Russel of Cup Coffee on his return from a buying trip to Guatemala and El Salvador, and Sam Pendergast of Fair Ferments explains how good things can still be made when big business abandons our regional growers.
+
+  link: http://shop.scragend.com/product/issue-one
+  color: green
+  cover-image:
+    src: issue-cover.jpg
+    alt: this is a cover of the issue
+  landscape-image:
+    src: latest-landscape.jpg
+    alt: this is a landscape image of the issue
+  feature-image:
+    src: feature-image.jpg
+    alt: this is the feature image of the issue

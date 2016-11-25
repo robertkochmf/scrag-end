@@ -1,0 +1,36 @@
+---
+layout: content
+title: Work
+permalink: /work/
+navigation_weight: 1
+
+blocks:
+- type: intro-block
+  subtitle: Work
+  title: We work cross sector wherever bold people are seeking to disrupt the status quo.
+
+
+prev:
+  url: /
+  title: Back home
+
+next:
+  url: /process
+  title: See how we work
+
+---
+
+
+<section class="page-section space-after">
+
+  <div class="section-inner">
+
+    {% for study in site.case_studies %}
+
+    	{% include case-study-card.liquid content=study %}
+
+    {% endfor %}
+
+  </div>
+
+</section>

@@ -1,0 +1,301 @@
+@font-face {
+font-family: "ChronicleSemiBold";
+src: url("/assets/fonts/ChronicleDisp-Semibold.otf") format("opentype");
+}
+
+@font-face {
+font-family: "ChronicleLight";
+src: url("/assets/fonts/ChronicleDisp-Light.otf") format("opentype");
+}
+
+@font-face {
+font-family: "ChronicleItalic";
+src: url("/assets/fonts/ChronicleDisp-Italic.otf") format("opentype");
+}
+
+@font-face {
+font-family: "IdealBook";
+src: url("/assets/fonts/IdealSans-Book.otf") format("opentype");
+}
+
+@font-face {
+font-family: "IdealSemiBold";
+src: url("/assets/fonts/IdealSans-Semibold.otf") format("opentype");
+}
+
+
+
+
+body {
+	font-family: 'IdealBook', serif;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1.display {
+	font-family: "ChronicleSemiBold", sans-serif;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+	line-height: 3rem;
+
+	@include media("<321px") {
+		font-size: 2.25rem;
+		line-height: 2.75rem;
+	}
+
+	@include media(">small") {
+		font-size: 3rem;
+		line-height: 3.25rem;
+	}
+
+	@include media(">medium") {
+		font-size: 4rem;
+		line-height: 4.5rem;
+	}
+
+	@include media(">huge") {
+		font-size: 4.75rem;
+		line-height: 5rem;
+	}
+}
+
+h1, .h1{
+	font-family: "ChronicleLight", sans-serif;
+	font-size: 2rem;
+	line-height: 2.5rem;
+
+	@include media(">small") {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+
+	@include media(">medium") {
+		font-size: 2.5rem;
+		line-height: 3rem;
+	}
+
+	@include media(">large") {
+		font-size: 3rem;
+		line-height: 4rem;
+	}
+
+	@include media(">huge") {
+		font-size: 4.5rem;
+		line-height: 5rem;
+	}
+}
+
+h2, .h2{
+	font-family: "ChronicleLight", sans-serif;
+	font-size: 3rem;
+	line-height: 4rem;
+	margin-bottom: 3rem;
+
+
+	@include media(">medium") {
+		font-size: 3.5rem;
+		line-height: 4.5rem;
+	}
+
+}
+
+h3, .h3{
+	font-family: "ChronicleSemiBold", serif;
+	font-size: 1rem;
+	line-height: 1.5rem;
+
+	@include media(">small") {
+		font-size: 1.25rem;
+		line-height: 2rem;
+	}
+
+	@include media(">medium") {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+	@include media(">large") {
+		font-size: 2rem;
+		line-height: 2.5rem;
+	}
+}
+//
+//
+//
+//
+h4, .h4{
+	font-family: "ChronicleLight", serif;
+	font-size: 1rem;
+	line-height: 1.5rem;
+
+	@include media(">medium") {
+		font-size: 1.5rem;
+		line-height: 2rem;
+	}
+
+}
+//
+h5, .h5{
+	font-family: "ChronicleItalic", serif;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-bottom: 2rem;
+}
+
+//
+	p {
+		margin-bottom: 2rem;
+		font-size: 1.125rem;
+		line-height: 2rem;
+
+		&.small{
+			font-size: 1rem;
+			line-height: 2rem;
+		}
+
+	}
+//
+// li{
+// 	margin-top: 1rem;
+// 	margin-bottom: 1rem;
+// 	padding-left: 1rem;
+// 	position: relative;
+// 	// list-style-type: disc;
+//
+// 	&:before{
+// 		content: " ";
+// 		display: block;
+// 		position: absolute;
+// 		left: 0em;
+// 		top: 0.75em;
+// 		width: 0.33em;
+// 		height: 0.33em;
+// 		border-radius: 50%;
+// 		background-color: $primary-color;
+// 	}
+//
+//
+// 	@include media(">medium") {
+// 		font-size: 1.25rem;
+// 		line-height: 2.5rem;
+// 	}
+// }
+//
+//
+// p a, .content a{
+// 	color: $text-dark-primary;
+// 	text-decoration: none;
+// 	display: inline-block;
+// 	position: relative;
+//
+	// &:after{
+	// 	content: "";
+	// 	position: absolute;
+	// 	left: 0px;
+	// 	right: 0px;
+	// 	z-index: -1;
+	// 	top: 60%;
+	// 	height: 0.33em;
+	// 	background-color: $primary-color;
+	// 	transform: scale3d(1, 1, 1) translate3d(0, 0em, 0);
+	// 	// transform-origin: 50% 100%;
+	// 	transition: transform 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+// 	}
+//
+// 	&:hover{
+// 		&:after{
+// 			transform: scale3d(1, 1, 1) translate3d(0, 0.5em, 0);
+// 			transition: transform 200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+// 		}
+// 	}
+// }
+//
+// blockquote{
+// 	margin-top: 2rem;
+// 	margin-bottom: 2rem;
+// 	font-size: 1.25rem;
+// 	line-height: 2rem;
+//
+//
+// 	@include media(">medium") {
+// 		font-size: 1.5rem;
+// 		line-height: 2.5rem;
+// 		margin-top: 4rem;
+// 		margin-bottom: 4rem;
+// 	}
+//
+// 	@include media(">large") {
+// 		font-size: 2rem;
+// 		line-height: 3rem;
+// 	}
+//
+// 	@include media(">huge") {
+// 		font-size: 2.5rem;
+// 		line-height: 4rem;
+// 	}
+// }
+//
+// .right-aligned{
+// 	text-align: right;
+// }
+
+a.text-link, a.secondary-link {
+	font-family: "IdealSemiBold";
+	font-size: .875rem;
+	position: relative;
+	text-transform: uppercase;
+}
+
+
+a.text-link {
+	padding-left: 2rem;
+
+		&:before{
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 6px;
+			width: 24px;
+			height: 1px;
+			background-color: $black;
+			transform-origin: left;
+			transition: transform .25s cubic-bezier(.75,0,.2,1);
+		}
+
+	&:hover {
+		color: darken($black, 100%);
+
+		&:before {
+			transform: translateX(8px) scaleX(.4);
+			transition: transform .25s cubic-bezier(.75,0,.2,1);
+		}
+	}
+
+}
+
+a.secondary-link {
+
+	&:before {
+		content: "";
+		position: absolute;
+		left: 0;
+		bottom: -4px;
+		width: 100%;
+		height: 1px;
+		opacity: 0;
+		background-color: $black;
+		transform-origin: bottom;
+		transition: all .25s cubic-bezier(.75,0,.2,1);
+		transform: translateY(0px) scaleX(.4);
+		pointer-events: none;
+	}
+
+	&:hover {
+		color: darken($black, 100%);
+
+		&:before {
+			opacity: 1;
+			transform: scaleX(1);
+			transition: all .25s cubic-bezier(.75,0,.2,1);
+		}
+	}
+}

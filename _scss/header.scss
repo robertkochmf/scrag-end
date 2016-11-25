@@ -1,0 +1,93 @@
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 800;
+  transition: $transition-hover-on;
+  width: 100%;
+}
+
+.header-inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-top: 2.75rem;
+  // padding-bottom: 2rem;
+
+}
+
+
+
+header #logo {
+  font-family: "ChronicleSemiBold";
+  font-size: .875rem;
+
+  .description {
+    font-family: "ChronicleItalic";
+  }
+
+  a {
+    body.cover-story &{
+      color: #FFF;
+
+
+    }
+    body.home & {
+      @include media("<small") {
+        color: #FFF;
+      }
+    }
+  }
+}
+
+@media (max-width: 658px) {
+  header #logo .description {
+    display: none;
+  }
+}
+
+header #main-navigation {
+  a {
+    text-transform: uppercase;
+    font-family: "IdealSemiBold";
+    font-size: .75rem;
+    margin-right: 2.5rem;
+    transition: all .25s cubic-bezier(.75,0,.2,1);
+
+    &:hover {
+      opacity: .8;
+      transition: all .25s cubic-bezier(.75,0,.2,1);
+    }
+
+    body.cover-story &{
+      color: #FFF;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (max-width: 658px) {
+  header #main-navigation a {
+    margin-right: 1.5rem;
+  }
+}
+
+body.home header.in-open, body.cover-story header.in-open {
+  #main-navigation a, #logo a {
+    color: $black;
+  }
+}
+
+
+.default-page #main-navigation a {color: #FFF;}
+
+header.hidden {
+  pointer-events: none;
+  opacity: 0;
+}

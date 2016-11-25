@@ -1,0 +1,15 @@
+.vertical-spaced{
+	margin-bottom: 4rem;
+
+	@include media(">medium") {
+		margin-bottom: 6rem;
+	}
+
+	@include media(">large") {
+		margin-bottom: 8rem;
+	}
+
+	@include media(">huge") {
+		margin-bottom: 10rem;
+	}
+}

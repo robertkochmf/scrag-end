@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+
+  <body role="main" {% if page.cover-image %} class="cover-story" {% endif %}>
+    {% include header.html %}
+    <section id="content" class="page-wrapper">
+
+      <div class="story-hero-container">
+
+        <section class="story-hero {% if page.issue %}issue-{{ page.issue}} {% endif %}">
+
+          {% if page.cover-image %}
+            <div class="cover-container">
+              <div class="cover-image" style="background-image: url('/assets/images/content/{{page.cover-image}}')" data-bottom="transform:translate3d(0px, 0%, 0px);" data-top-bottom="transform:translate3d(0px, 15%, 0px);"></div>
+            </div>
+
+          {% endif %}
+
+          <div class="story-hero-content container animation-set">
+            <div class="story-hero-inner row animated animated--no-slide-up">
+              <div class="story-info col-lg-10 offset-lg-1">
+                <h3>{{page.location}}</h3>
+                <div class="spacer"></div>
+                <h1 class="display">{{page.title}}</h1>
+                <h5 class="story-meta">
+                  {% if page.issue %} Originally published in Issue {{ page.issue}} {% else %} Published {{ page.date-published }} {% endif %} — {{ page.read-time }} minute read
+                </h5>
+                <h4 class="byline">
+                  {% for item in page.contributors %}
+                    <span>
+                      {{ item.type }} by {{ item.name}} {% if item.occupation %} — {{ item.occupation }} {% endif %}
+                    </span>
+                  {% endfor %}
+                </h4>
+              </div>
+
+              <div class="feature-image" data-center-top="transform:translate3d(0px, 10%, 0px)" data-top-bottom="transform:translate3d(0px, -10%, 0px)">
+                <img src="/assets/images/content/{{page.feature-image}}" alt="" />
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+      </div>
+
+
+
+
+      <section class="container story-lead">
+        <div class="row">
+          <div class="lead-paragraph col-lg-8 offset-lg-2">
+            <p>
+              {{ page.lead-paragraph | markdownify }}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <main class="story-body">
+
+        {% for module in page.modules %}
+
+          {% if module.type == 'content-image-module' %}
+            {% include content-image-module.liquid %}
+          {% endif %}
+
+          {% if module.type == 'wide-image-module' %}
+            {% include wide-image-module.liquid %}
+          {% endif %}
+
+          {% if module.type == 'quote-module' %}
+            {% include quote-module.liquid %}
+          {% endif %}
+
+          {% if module.type == 'portrait-module' %}
+            {% include portrait-module.liquid %}
+          {% endif %}
+
+        {% endfor %}
+
+      </main>
+
+      {% if page.issue %}
+        {% include purchase-issue.liquid %}
+      {% endif %}
+
+      {% include next-story.liquid %}
+
+
+    </section>
+    {% include footer.html %}
+  </body>
+
+
+</html>
