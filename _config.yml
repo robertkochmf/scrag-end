@@ -18,7 +18,7 @@ title: Scag End
 email: hello@scragend.com
 description: > # this means to ignore newlines until "baseurl:"
   Scrag End is...
-baseurl: "scrag-end" # the subpath of your site, e.g. /blog
+baseurl: "/scrag-end" # the subpath of your site, e.g. /blog
 url: "http://scragend.com" # the base hostname & protocol for your site
 
 
