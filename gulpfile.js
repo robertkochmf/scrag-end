@@ -9,7 +9,7 @@ var imagemin    = require('gulp-imagemin');
 var cssmin      = require('gulp-cssmin');
 var htmlmin     = require('gulp-htmlmin');
 var uglify      = require('gulp-uglify');
-
+var ghPages      = require('gulp-gh-pages');
 
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -97,3 +97,15 @@ gulp.task('compress', ['jekyll-build', 'sass'], function() {
  */
 gulp.task('default', ['browser-sync', 'watch']);
 gulp.task('build', ['jekyll-build', 'sass', 'compress']);
+
+/**
+ * Deploy to Github Pages task
+ */
+ gulp.task('deploy', function() {
+   return gulp.src('./_site/**/*')
+     .pipe(ghPages({
+       remoteUrl: 'https://github.com/ScragEnd/scragend.github.io.git',
+       branch: 'master',
+       message: 'Successfully deployed - [timestamp]'
+     }));
+ });

@@ -80,8 +80,9 @@ init = function(){
   var resizeTimer;
 
   function heroHeight() {
-		var storyHeroContent = $('.story-hero-content').height();
-		$('.story-hero-container').height(storyHeroContent);
+		var imageHeight = $('.story-feature-image').height();
+		var viewHeight = $('.story-hero').height();
+		$('.story-hero-container').height(imageHeight + viewHeight);
   };
 
   $(window).resize(function() {

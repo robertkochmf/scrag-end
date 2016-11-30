@@ -5,30 +5,34 @@
         <h5>About Scrag End</h5>
         <h2>A journal about food, and also a cut of lamb</h2>
         <p>
-          People are wanting to fly to international destinations for vacations but planning a holiday getaway can easily turn into a stressful venture when the matter of costs comes up. However, airfare can be very expensive. Air fare by itself can kill the excitement.
+          Scrag End began as a project of passion of two brothers; one a chef, and the other a designer. Since its founding in 2013, this on-again-off-again project has become a spring board for pop-up dinners, speaking engagements and even a daily paper. Most of all, the project has brought together great food thinkers and doers from around the globe and shaped the way we think about food. Scrag End is ad-free and supported in full by its cover price. It concerns itself with the story of food. It supports slow journalism and authentic voices, often working with non-writers to give its contributors an uncompromising platform and its readers the transparency they deserve. The journal is published in Melbourne, Australia, with content from all corners of the globe. It is designed to be small, light and environmentally sensitive.
         </p>
         <a href="#" class="text-link">Contribute to Scrag End</a>
       </div>
-      <div class="scrag-image">
-        <img src="assets/images/content/team-photo.jpg" alt="" />
+      <div class="scrag-image col-md-7">
+        <img src="assets/images/content/scrag-team.jpg" alt="" />
       </div>
     </div>
 
     <div class="stockist-content row">
       <ul class="stockist-list stockist--aus col-md-6 col-lg-5">
         <li class="title">Australian Stockists</li>
-        <li>Books for Cooks, Fitzroy, VIC</li>
-        <li>Readings, Carlton, VIC</li>
-        <li>Happy Valley, Collingwood, VIC</li>
-        <li class="link"><a href="#" class="text-link">Become an australian stockist</a></li>
+        {% for stockist in site.data.stockists %}
+          {% if stockist.type == "Australia" %}
+            <li>{{ stockist.name }}, {{ stockist.location }}, {{ stockist.state }}</li>
+          {% endif %}
+        {% endfor %}
+        <li class="link"><a href="mailto:hello@scragend.com" class="text-link">Become an australian stockist</a></li>
       </ul>
 
       <ul class="stockist-list stockist--int col-md-6 col-lg-5">
         <li class="title">International Stockists</li>
-        <li>Books for Cooks, Fitzroy, VIC</li>
-        <li>Readings, Carlton, VIC</li>
-        <li>Happy Valley, Collingwood, VIC</li>
-        <li class="link"><a href="#" class="text-link">Become an international stockist</a></li>
+        {% for stockist in site.data.stockists %}
+          {% if stockist.type == "International" %}
+            <li>{{ stockist.name }}, {{ stockist.location }}</li>
+          {% endif %}
+        {% endfor %}
+        <li class="link"><a href="mailto:hello@scragend.com" class="text-link">Become an international stockist</a></li>
       </ul>
     </div>
 
