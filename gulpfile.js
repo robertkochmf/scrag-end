@@ -104,8 +104,8 @@ gulp.task('build', ['jekyll-build', 'sass', 'compress']);
  gulp.task('deploy', function() {
    return gulp.src('./_site/**/*')
      .pipe(ghPages({
-       remoteUrl: 'https://github.com/ScragEnd/scragend.github.io.git',
+       remoteUrl: 'git@github.com:ScragEnd/scragend.github.io.git',
        branch: 'master',
-       message: 'Successfully deployed - [timestamp]'
+       message: 'Successfully deployed'
      }));
  });
