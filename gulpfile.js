@@ -22,6 +22,7 @@ var messages = {
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
+
     return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
@@ -102,7 +103,11 @@ gulp.task('build', ['jekyll-build', 'sass', 'compress']);
  * Deploy to Github Pages task
  */
  gulp.task('deploy', function() {
-   return gulp.src('./_site/**/*')
+
+   gulp.src(['CNAME'])
+     .pipe(gulp.dest('_site'))
+
+   return gulp.src(['./_site/**/*', './_site/CNAME'])
      .pipe(ghPages({
        remoteUrl: 'git@github.com:ScragEnd/scragend.github.io.git',
        branch: 'master',
