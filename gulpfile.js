@@ -100,9 +100,9 @@ gulp.task('default', ['browser-sync', 'watch']);
 gulp.task('build', ['jekyll-build', 'sass', 'compress']);
 
 /**
- * Deploy to Github Pages task
+ * Deploy to Github Pages task, build the site and deploys
  */
- gulp.task('deploy', function() {
+ gulp.task('deploy', ['build'], function() {
 
    gulp.src(['CNAME'])
      .pipe(gulp.dest('_site'))
