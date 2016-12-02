@@ -41,3 +41,19 @@ exclude:
   - Gemfile
   - Gemfile.lock
   # - assets
+
+# Settings for Contentful
+contentful:
+  spaces:
+    - stories:
+        space: kkzerdgg97de
+        access_token: d06f78ef51ad79fe7a6422bef276d258672b8709b0756821073b644e31f56997
+
+# Settings for Data Page Generator
+page_gen:
+  - data: contentful.spaces.portfolio.project
+    name: title
+    index_files: true
+    template: project
+    dir: projects
+    extension: html

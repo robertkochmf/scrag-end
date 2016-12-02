@@ -9,13 +9,19 @@ var imagemin    = require('gulp-imagemin');
 var cssmin      = require('gulp-cssmin');
 var htmlmin     = require('gulp-htmlmin');
 var uglify      = require('gulp-uglify');
-var ghPages      = require('gulp-gh-pages');
+var ghPages     = require('gulp-gh-pages');
+var contentfulData = require('contentful-data');
 
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
+
+
+// gulp.task('default', ['data'], function(){
+//   console.log('Retrieved contenful entries.');
+// });
 
 /**
  * Build the Jekyll Site
