@@ -9,7 +9,8 @@ var imagemin    = require('gulp-imagemin');
 var cssmin      = require('gulp-cssmin');
 var htmlmin     = require('gulp-htmlmin');
 var uglify      = require('gulp-uglify');
-
+var ghPages     = require('gulp-gh-pages');
+var contentfulData = require('contentful-data');
 
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -17,11 +18,17 @@ var messages = {
     jekyllBuild: '<span style="color: grey">Running:</span> $ jekyll build'
 };
 
+
+// gulp.task('default', ['data'], function(){
+//   console.log('Retrieved contenful entries.');
+// });
+
 /**
  * Build the Jekyll Site
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
+
     return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
         .on('close', done);
 });
@@ -97,3 +104,19 @@ gulp.task('compress', ['jekyll-build', 'sass'], function() {
  */
 gulp.task('default', ['browser-sync', 'watch']);
 gulp.task('build', ['jekyll-build', 'sass', 'compress']);
+
+/**
+ * Deploy to Github Pages task, build the site and deploys
+ */
+ gulp.task('deploy', ['build'], function() {
+
+   gulp.src(['CNAME'])
+     .pipe(gulp.dest('_site'))
+
+   return gulp.src(['./_site/**/*', './_site/CNAME'])
+     .pipe(ghPages({
+       remoteUrl: 'git@github.com:ScragEnd/scragend.github.io.git',
+       branch: 'master',
+       message: 'Successfully deployed'
+     }));
+ });

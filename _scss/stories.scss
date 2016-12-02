@@ -22,6 +22,16 @@ section.story-hero {
   background: currentColor;
   position: relative;
   height: 100vh;
+  display: flex;
+
+  @include media("<medium") {
+    height: 125vh;
+  }
+
+  .story-hero-content {
+    position: relative;
+    align-self: center;
+  }
 
   .cover-container {
     position: absolute;
@@ -61,23 +71,30 @@ section.story-hero {
   .story-hero-inner {
     display: flex;
     flex-direction: column;
+    position: relative;
+    // top: 50%;
+    // transform: translateY(-40%);
+    padding-top: 14rem;
 
     @include media("<medium") {
   		display: block;
   	}
   }
 
+  .story-feature-image {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    align-self: flex-end;
+    transform: translateY(50%);
+  }
+
   .story-info {
     position: relative;
     color: $black;
-    transform: translate3d(0px, 50%, 0px);
     z-index: 200;
     pointer-events: none;
-
-    @include media("<medium") {
-  		transform: translate3d(0px, 0px, 0px);
-      padding-top: 160px;
-  	}
 
     body.cover-story &{
       color: #FFF;
@@ -95,23 +112,9 @@ section.story-hero {
   .feature-image {
     position: relative;
     padding: 0;
-    // transform: translate3d(0px, 50%, 0px);
-
     background-color: currentColor;
-    // width: 100%;
-    // margin: 0 auto;
-
-    // @include media(">small") {
-    //   width: 400px;
-  	// }
-    //
-    // @include media(">medium") {
-    //   width: 400px;
-    //   margin: 0;
-  	// }
 
     img {
-      // width: 400px;
       opacity: .9;
       transition: opacity 1s cubic-bezier(.18,1,.25,1);
     }
@@ -125,23 +128,17 @@ section.story-hero {
   }
 }
 
-.feature-image.landscape {
-  margin-top: calc(100vw - 90%);
-}
 
-.feature-image.portrait {
-  margin-top: calc(100vw - 100%);
-}
 
 //Lead Paragraph
 
 .story-lead {
-  margin-top: 6rem;
+  // margin-top: 4rem;
   margin-bottom: 12rem;
 
   @include media("<small") {
-    margin-top: 10rem;
-    margin-bottom: 6rem;
+    // margin-top: 6rem;
+    margin-bottom: 4rem;
   }
 
   .lead-paragraph {
@@ -153,6 +150,11 @@ section.story-hero {
 			font-weight: 600;
       font-size: 1.5rem;
       line-height: 2.5rem;
+
+      @include media("<small") {
+        font-size: 1rem;
+        line-height: 2rem;
+      }
     }
   }
 }
@@ -179,13 +181,15 @@ section.story-hero {
         margin-bottom: 0;
       }
 
-      @include media("<medium") {
-        margin-bottom: 4rem;
-      }
+
     }
 
     .image-block {
       height: 100%;
+
+      @include media("<544px") {
+        margin-top: 4rem;
+      }
 
       &.image-block--top {
         align-self: flex-start;
@@ -281,6 +285,15 @@ p.caption {
       }
 
       a {pointer-events: auto;}
+
+      p {
+        width: 95%;
+
+        @include media("<medium") {
+          width: 100%;
+        }
+
+      }
     }
 
     .image-stack {

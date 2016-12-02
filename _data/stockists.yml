@@ -1,0 +1,85 @@
+- type: Australia
+  name: Books for Cooks
+  location: Fitzroy
+  state: VIC
+  link: http://www.booksforcooks.com.au/
+- type: Australia
+  name: Readings
+  location: Carlton
+  state: VIC
+  link:
+- type: Australia
+  name: Happy Valley
+  location: Collingwood
+  state: VIC
+  link:
+- type: Australia
+  name: Dal Zotto Wines
+  location: Whitfield
+  state: VIC
+  link:
+- type: Australia
+  name: Swensk
+  location: Melbourne
+  state: VIC
+  link:
+- type: Australia
+  name: Page Eight
+  location: Mornington
+  state: VIC
+  link:
+- type: Australia
+  name: Scrumptions Reads
+  location: Fortitude Valley
+  state: QLD
+  link:
+- type: Australia
+  name: Sourced Grocer
+  location: Teneriffe
+  state: QLD
+  link:
+- type: Australia
+  name: Merriweather
+  location: South Brisbane
+  state: QLD
+  link:
+- type: Australia
+  name: Strauss
+  location: Brisbane City
+  state: QLD
+  link:
+- type: Australia
+  name: Cup Roastery
+  location: Woolloongabba
+  state: QLD
+  link:
+- type: Australia
+  name: Künstler
+  location: Fortitude Valley
+  state: QLD
+  link:
+- type: International
+  name: Basheer Graphic Books
+  location: Singapore
+  state:
+  link:
+- type: International
+  name: Filter
+  location: Mumbai
+  state:
+  link:
+- type: International
+  name: Athenaeum Newscentre
+  location: Amsterdam
+  state:
+  link:
+- type: International
+  name: Kitchen Arts & Letters
+  location: New York
+  state:
+  link:
+- type: International
+  name: Clover Food Lab
+  location: Boston
+  state:
+  link:

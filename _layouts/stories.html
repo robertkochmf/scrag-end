@@ -19,7 +19,7 @@
           {% endif %}
 
           <div class="story-hero-content container animation-set">
-            <div class="story-hero-inner row animated animated--no-slide-up">
+            <!-- <div class="story-hero-inner row animated animated--no-slide-up"> -->
               <div class="story-info col-lg-10 offset-lg-1">
                 <h3>{{page.location}}</h3>
                 <div class="spacer"></div>
@@ -34,15 +34,13 @@
                     </span>
                   {% endfor %}
                 </h4>
-              </div>
-
-
-              <div class="feature-image {{ page.feature-image.orientation }} {% if page.feature-image.orientation == "landscape" %} col-lg-6 offset-lg-5 {% else %} col-lg-4 offset-lg-7 {% endif %}" >
-                <img src="/assets/images/content/{{page.feature-image.src}}" alt="" />
-              </div>
-
+              <!-- </div> -->
             </div>
-
+          </div>
+          <div class="story-feature-image {{ page.feature-image.orientation }} container">
+            <div class="feature-image {% if page.feature-image.orientation == "landscape" %} col-lg-6 offset-lg-5 {% else %} col-lg-4 offset-lg-7 {% endif %}" >
+              <img src="/assets/images/content/{{page.feature-image.src}}" alt="" />
+            </div>
           </div>
         </section>
 

@@ -8,13 +8,13 @@ zero:
   link: http://shop.scragend.com/product/issue-zero
   color: yellow
   cover-image:
-    src: issue-cover.jpg
+    src: issue-zero-cover.jpg
     alt: this is a cover of the issue
   landscape-image:
     src: latest-landscape.jpg
     alt: this is a landscape image of the issue
   feature-image:
-    src: feature-image.jpg
+    src: issue-zero-feature-image.jpg
     alt: this is the feature image of the issue
 
 one:
@@ -27,11 +27,11 @@ one:
   link: http://shop.scragend.com/product/issue-one
   color: green
   cover-image:
-    src: issue-cover.jpg
+    src: issue-one-cover.jpg
     alt: this is a cover of the issue
   landscape-image:
     src: latest-issue-hero.jpg
     alt: this is a landscape image of the issue
   feature-image:
-    src: feature-image.jpg
+    src: issue-one-feature-image.jpg
     alt: this is the feature image of the issue

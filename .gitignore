@@ -1,5 +1,6 @@
 _site
+.publish
 .sass-cache
 .jekyll-metadata
 node_modules
-
+.DS_Store
